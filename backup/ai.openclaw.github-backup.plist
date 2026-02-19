@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>ai.openclaw.github-backup</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/vercent/.openclaw/workspace/backup/backup_to_github.sh</string>
+  </array>
+
+  <!-- Run every 6 hours (21600s). Adjust as needed. -->
+  <key>StartInterval</key>
+  <integer>21600</integer>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <!-- What to back up -->
+    <key>BACKUP_DIR</key>
+    <string>/Users/vercent/.openclaw/workspace</string>
+
+    <!-- GitHub repo remote (SSH recommended) -->
+    <key>GITHUB_REMOTE_URL</key>
+    <string>git@github.com:VercentTang/OpenClawMac.git</string>
+
+    <key>BRANCH</key>
+    <string>main</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/openclaw-github-backup.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/openclaw-github-backup.err.log</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
