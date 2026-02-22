@@ -11,9 +11,14 @@
     <string>/Users/vercent/.openclaw/workspace/backup/backup_to_github.sh</string>
   </array>
 
-  <!-- Run every 6 hours (21600s). Adjust as needed. -->
-  <key>StartInterval</key>
-  <integer>21600</integer>
+  <!-- Run daily at 06:00 (local time). -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>6</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
 
   <key>EnvironmentVariables</key>
   <dict>
