@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.user.bluebubbles-proxy</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/local/bin/node</string>
+    <string>/Users/vercent/.openclaw/workspace/bluebubbles/bb_proxy.mjs</string>
+  </array>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>BB_TARGET</key>
+    <string>http://127.0.0.1:1234</string>
+    <key>BB_PASSWORD</key>
+    <string>Vpbbk729</string>
+    <key>BB_PROXY_PORT</key>
+    <string>1235</string>
+  </dict>
+
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/bluebubbles-proxy.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/bluebubbles-proxy.err.log</string>
+</dict>
+</plist>
